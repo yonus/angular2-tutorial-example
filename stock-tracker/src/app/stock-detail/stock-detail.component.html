@@ -1,0 +1,43 @@
+<div class="stockContent">
+  <div class="row">
+    <div class="col-md-12">
+      Stock Detail
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12" highlight>
+      <span class="">Symbol:</span>
+      <span class="">{{stock.symbol}}</span>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12" highlight>
+      <span class="">Name:</span>
+      <span class="">{{stock.name}}</span>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12" highlight>
+      <span class="">Open:</span>
+      <span class="">{{stock.open}}</span>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12" highlight>
+      <span class="">Previous Close:</span>
+      <span class="">{{stock.prevClose}}</span>
+    </div> 
+  </div>
+  <div class="row">
+    <div class="col-md-12" highlight>
+      <span class="">Volume:</span>
+      <span class="">{{stock.volume}}</span>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12" >
+       <button type="button" class="btn btn-lg btn-primary" (click)="gotoEdit()">Edit</button>
+    </div>
+  </div>
+</div>

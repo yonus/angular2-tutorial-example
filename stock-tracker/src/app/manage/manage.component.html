@@ -1,0 +1,47 @@
+<div class="container">
+  <div class="row">
+    <div class="col-2"></div>
+    <div class="col-2">
+
+
+      <form (ngSubmit)="onSubmit()" #StockForm="ngForm">
+       
+        <div class="form-group">
+          <label for="Stock">Stock List</label>
+          <select class="form-control" [ngModel]="editStock.symbol" (change)="onChangeSymbol($event)"   name="stockItemSelectControl">
+           <option *ngFor="let stockItem of listStock" [value]="stockItem.symbol">{{stockItem.symbol}}</option>
+        </select>
+        </div>
+
+        <div class="form-group">
+          <label for="symbol">Symbol</label>
+          <input type="text" [disabled] ="!isNew" name="symbol" [(ngModel)]="editStock.symbol" class="form-control" required/>
+        </div>
+
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" name="name" [(ngModel)]="editStock.name" class="form-control" required/>
+        </div>
+
+        <div class="form-group">
+          <label for="open">Open</label>
+          <input type="number" name="open" [(ngModel)]="editStock.open" class="form-control" required />
+        </div>
+
+        <div class="form-group">
+          <label for="prevClose">Previous Close</label>
+          <input type="text" name="prevClose" [(ngModel)]="editStock.prevClose" class="form-control" required/>
+        </div>
+
+        <div class="form-group">
+          <label for="volume">Volume</label>
+          <input type="text" name="volume" [(ngModel)]="editStock.volume" class="form-control" required/>
+        </div>
+
+        <button [disabled]="!StockForm.form.valid" class="btn btn-primary" type="submit">Save</button>
+        <button [hidden]="!isNew" class="btn btn-primary" type="button" (click)="clear()">Clear</button>
+      </form>
+
+    </div>
+  </div>
+</div>

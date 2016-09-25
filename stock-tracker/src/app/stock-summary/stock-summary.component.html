@@ -1,0 +1,14 @@
+<div class="stockSummary" [ngClass]="{positive:isPositive(), negative:isNegative()}"  (click) = selectStockSummary(stockSummary) >
+  <div class="row">
+    <div class="col-md-12" >
+      <div class="stockSummaryContent">
+       <span>
+        {{stockSummary.symbol.toUpperCase()}}<br />
+        {{stockSummary.lastTradePriceOnly | currency:'USD':true:'.2'}}<br />
+        {{stockSummary.change | currency:'USD':true:'.2'}} <br/>
+        ({{stockSummary.changeInPercent | percent}})
+        </span>
+      </div>
+    </div>
+  </div>
+</div>

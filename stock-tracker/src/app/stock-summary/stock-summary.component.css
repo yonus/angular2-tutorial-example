@@ -1,0 +1,25 @@
+.stockSummary{
+    width: 150px;
+    height: 150px;
+    background-color: lightskyblue;
+    margin: 10px;
+    font-size: 13px;
+    font-weight: bold;
+    cursor: pointer;
+
+}
+
+.stockSummaryContent{
+    padding: 20px;
+    font-size:15px;
+}
+
+.positive{
+    background-color: forestgreen;
+    color: aliceblue;
+}
+
+.negative{
+    background-color:#BB0000;
+    color: aliceblue;
+}

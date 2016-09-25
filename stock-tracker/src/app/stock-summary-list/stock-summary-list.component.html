@@ -1,0 +1,5 @@
+<div class="row" *ngIf="stockSummaryList" >
+   <div class="col-md-3" *ngFor="let item of stockSummaryList" >
+      <app-stock-summary [stockSummary] = item  (selectStockSummaryEvent)="selectStockSummary($event)"></app-stock-summary>
+    </div>
+</div>

@@ -1,0 +1,10 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-9">
+      <app-stock-summary-list [stockSummaryList]=stockSummaryList (openStockDetailNotify) = "openStockDetail($event)"></app-stock-summary-list>
+    </div>
+    <div class="col-md-3">
+       <app-stock-detail *ngIf="selectedStock" [stock] ="selectedStock"></app-stock-detail>
+       </div>
+  </div>
+</div>
